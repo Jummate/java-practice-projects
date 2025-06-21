@@ -67,7 +67,7 @@ public class AudioPlayer {
                 case "N" -> {
                     clip.stop();
                     clip.close();
-                    clip = null; // Signal that we want a new song next loop
+                    clip = null;
                 }
                 case "Q" -> {
                     clip.stop();
@@ -79,62 +79,6 @@ public class AudioPlayer {
             }
         }
     }
-
-    // public static void main(String[] args) {
-
-    // AudioPlayer.songList.add("Maple - Dyalla.wav");
-    // AudioPlayer.songList.add("Regulate - Dyalla.wav");
-
-    // printSong();
-
-    // // printAudioPlayerOptions();
-    // // System.out.print("Enter your choice: ");
-    // String response = "";
-
-    // // printSong();
-
-    // while (!response.equals("Q")) {
-    // songChoice = getUserSongChoice();
-    // songToPlay = songList.get(songChoice);
-    // System.out.println("file" + songToPlay);
-    // file = new File(songToPlay);
-    // if (clip != null && clip.isRunning()) {
-    // clip.stop();
-    // }
-    // if (clip != null) {
-    // clip.close();
-    // }
-    // printAudioPlayerOptions();
-    // System.out.print("Select an option: ");
-    // response = input.next().toUpperCase();
-    // try {
-    // audioInputStream = AudioSystem.getAudioInputStream(file);
-    // clip = AudioSystem.getClip();
-    // clip.open(audioInputStream);
-    // switch (response) {
-    // case "P" -> clip.start();
-    // case "S" -> clip.stop();
-    // case "R" -> clip.setMicrosecondPosition(0);
-    // case "Q" -> {
-    // clip.stop();
-    // clip.close();
-    // System.exit(0);
-    // }
-    // }
-    // } catch (FileNotFoundException e) {
-    // System.out.println("File could not be found");
-    // } catch (UnsupportedAudioFileException e) {
-    // System.out.println("Unsupported audio file");
-    // } catch (LineUnavailableException e) {
-    // System.out.println("Unable to access audio resource");
-    // } catch (IOException e) {
-    // System.out.println("Something went wrong");
-    // }
-    // System.out.print("Select an option: ");
-    // response = input.next().toUpperCase();
-    // }
-
-    // }
 
     static void printSong() {
         System.out.println("======== Available Songs =======");
